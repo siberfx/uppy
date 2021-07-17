@@ -10,7 +10,7 @@ tagline: "advanced upload progress status bar"
 ---
 
 The `@uppy/status-bar` plugin shows upload progress and speed, ETAs, pre- and post-processing information, and allows users to control (pause/resume/cancel) the upload.
-It is best used in combination with a simple file source plugin, such as [`@uppy/file-input`][] or [`@uppy/drag-drop`][], or a custom implementation.
+It is best used in combination with a simple file source plugin, such as \[`@uppy/file-input`]\[@uppy/file-input] or \[`@uppy/drag-drop`]\[@uppy/drag-drop], or a custom implementation.
 
 ```js
 import StatusBar from '@uppy/status-bar'
@@ -170,4 +170,5 @@ const strings = {
 Remove all children of the `target` element before mounting the Status Bar. By default, Uppy will append any UI to the `target` DOM element. This is the least dangerous option. However, you may have some fallback HTML inside the `target` element in case JavaScript or Uppy is not available. In that case, you can set `replaceTargetContent: true` to clear the `target` before appending.
 
 [`@uppy/file-input`]: /docs/file-input
+
 [`@uppy/drag-drop`]: /docs/drag-drop

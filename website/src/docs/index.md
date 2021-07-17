@@ -57,7 +57,7 @@ Uppy can be used with a module bundler such as [Webpack](http://webpack.js.org/)
 
 Install the `@uppy/core` package from npm:
 
-``` bash
+```bash
 $ npm install @uppy/core
 ```
 
@@ -117,18 +117,19 @@ You can also use a pre-built bundle from Transloadit's CDN: Edgly. `Uppy` will a
 
 1\. Add a script at the bottom of the closing `</body>` tag:
 
-``` html
+```html
 <script src="https://releases.transloadit.com/uppy/v1.30.0/uppy.min.js"></script>
 ```
 
 2\. Add CSS to `<head>`:
-``` html
+
+```html
 <link href="https://releases.transloadit.com/uppy/v1.30.0/uppy.min.css" rel="stylesheet">
 ```
 
 3\. Initialize at the bottom of the closing `</body>` tag:
 
-``` html
+```html
 <script>
   var uppy = Uppy.Core()
   uppy.use(Uppy.DragDrop, { target: '#drag-drop-area' })
@@ -138,11 +139,11 @@ You can also use a pre-built bundle from Transloadit's CDN: Edgly. `Uppy` will a
 
 ## Documentation
 
-- [Uppy](/docs/uppy/) — full list of options, methods and events.
-- [Plugins](/docs/plugins/) — list of Uppy plugins and their options.
-- [Server](/docs/companion/) — setting up and running a Companion instance, which adds support for Instagram, Dropbox, Google Drive, direct links, and other remote sources.
-- [React](/docs/react/) — components to integrate Uppy UI plugins with React apps.
-- [Writing Plugins](/docs/writing-plugins) — how to write a plugin for Uppy (documentation in progress).
+*   [Uppy](/docs/uppy/) — full list of options, methods and events.
+*   [Plugins](/docs/plugins/) — list of Uppy plugins and their options.
+*   [Server](/docs/companion/) — setting up and running a Companion instance, which adds support for Instagram, Dropbox, Google Drive, direct links, and other remote sources.
+*   [React](/docs/react/) — components to integrate Uppy UI plugins with React apps.
+*   [Writing Plugins](/docs/writing-plugins) — how to write a plugin for Uppy (documentation in progress).
 
 ## Browser Support
 
@@ -158,7 +159,7 @@ We still run end to end tests with IE10, but we are not actively supporting it o
 
 Uppy heavily uses Promises. If your target environment [does not support Promises](https://caniuse.com/#feat=promises), use a polyfill like `es6-promise` before initialising Uppy.
 
-When using remote providers like Google Drive or Dropbox, the Fetch API is used. If your target environment does not support the [Fetch API](https://caniuse.com/#feat=fetch), use a polyfill like `whatwg-fetch` before initialising Uppy. The Fetch API polyfill must be loaded _after_ the Promises polyfill, because Fetch uses Promises.
+When using remote providers like Google Drive or Dropbox, the Fetch API is used. If your target environment does not support the [Fetch API](https://caniuse.com/#feat=fetch), use a polyfill like `whatwg-fetch` before initialising Uppy. The Fetch API polyfill must be loaded *after* the Promises polyfill, because Fetch uses Promises.
 
 With a module bundler, you can use the required polyfills like so:
 
