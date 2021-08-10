@@ -93,12 +93,14 @@ const log = (msg, tag, level, id, color, shouldLogStackTrace) => {
     msg.stack = maskMessage(msg.stack)
     // exclude msg from template string so values such as error objects
     // can be well formatted
+    // eslint-disable-next-line no-console
     console.log(color(`companion: ${time} [${level}] ${id}${whitespace}${tag}`), color(msg.stack))
     return
   }
 
   // exclude msg from template string so values such as error objects
   // can be well formatted
+  // eslint-disable-next-line no-console
   console.log(color(`companion: ${time} [${level}] ${id}${whitespace}${tag}`), color(msg))
 }
 
